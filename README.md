@@ -61,7 +61,7 @@ Marcos trocou o telhado de sua casa e ficou com **100m² de telhas romanas ocupa
 
 ## 📁 Estrutura do Projeto
 
-
+''
 Projeto-MoviTalent/
 ├── index.html                 # Tela inicial / Splash
 ├── cadastrar.html             # Cadastro de usuário
@@ -77,6 +77,7 @@ Projeto-MoviTalent/
 ├── meus-itens.js              # Lógica da página meus itens
 ├── novo-item.js               # Lógica da página novo item
 └── 5634fd87-8ef3-48b1-...png  # Logo da RENOVA
+
 ---
 
 ## 🚀 Como Executar o Projeto
