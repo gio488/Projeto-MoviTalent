@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #e8f0e5 0%, #d4e0d0 50%, #c8d8c4 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "♻️";
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 140px;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "🌱";
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  font-size: 110px;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decor-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.decor-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(46, 106, 79, 0.03);
+}
+
+.circle-1 { width: 350px; height: 350px; top: -120px; left: -120px; }
+.circle-2 { width: 550px; height: 550px; bottom: -200px; right: -180px; }
+.circle-3 { width: 220px; height: 220px; top: 35%; right: 5%; }
+.circle-4 { width: 180px; height: 180px; bottom: 15%; left: 5%; }
+
+h1, h2, h3, h4, .logo-text, .nav-link, .btn {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --green-renova: #2D6A4F;
+  --green-light: #52B788;
+  --green-mint: #95D5B2;
+  --terracota: #E76F51;
+  --terracota-light: #F4A261;
+  --sand: #F4F1DE;
+  --brown-dark: #3D2B1F;
+  --shadow-soft: 0 20px 35px -12px rgba(0,0,0,0.1);
+  --shadow-hover: 0 30px 45px -15px rgba(0,0,0,0.2);
+  --glass-bg: rgba(255, 255, 245, 0.9);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover { transform: scale(1.02); }
+
+.logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--green-renova), var(--terracota));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.logo-sub {
+  font-size: 0.7rem;
+  color: var(--terracota);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.btn-primary-renova {
+  background: linear-gradient(95deg, var(--green-renova), var(--green-light));
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  color: white;
+  box-shadow: 0 4px 12px rgba(45,106,79,0.3);
+}
+
+.btn-primary-renova:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -8px rgba(45,106,79,0.5);
+  background: linear-gradient(95deg, #236b48, var(--green-light));
+  color: white;
+}
+
+.btn-outline-renova {
+  border: 2px solid var(--terracota);
+  color: var(--terracota);
+  background: transparent;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-renova:hover {
+  background: var(--terracota);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -6px rgba(231,111,81,0.4);
+}
+
+.card-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,245,0.7);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Cards de itens */
+.item-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: none;
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
+}
+
+.item-img-placeholder {
+  background: linear-gradient(135deg, #ddebe0, #cde0d4);
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.item-img-placeholder::after {
+  content: "♻️";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 24px;
+  opacity: 0.3;
+}
+
+.category-badge {
+  background: #e8f0e8;
+  color: var(--green-renova);
+  border-radius: 50px;
+  padding: 5px 14px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.nav-glass {
+  background: rgba(255,255,245,0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.page-transition {
+  animation: fadeSlideUp 0.45s ease-out;
+}
+
+.floating-icon {
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+.bid-card {
+  background: linear-gradient(115deg, #fef9f0, #fffaf5);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-left: 4px solid var(--terracota);
+  transition: all 0.2s;
+}
+
+.bid-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+}
+
+.footer-renova {
+  background: linear-gradient(135deg, var(--brown-dark), #2a2418);
+  color: var(--sand);
+  padding: 40px 0 30px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-control-custom {
+  border-radius: 60px;
+  border: 1px solid #e2e8e6;
+  padding: 12px 20px;
+  transition: all 0.2s;
+  background: white;
+}
+
+.form-control-custom:focus {
+  border-color: var(--green-light);
+  box-shadow: 0 0 0 4px rgba(82,183,136,0.15);
+  outline: none;
+}
+
+.avatar-bg {
+  background: linear-gradient(135deg, var(--green-renova), var(--green-light));
+  width: 42px;
+  height: 42px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #e0e8e0; border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: var(--green-renova); border-radius: 10px; }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENOVA · Anunciar Item</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="decor-bg">
+  <div class="circle circle-1"></div>
+  <div class="circle circle-2"></div>
+  <div class="circle circle-3"></div>
+</div>
+
+<nav class="navbar nav-glass sticky-top py-2">
+  <div class="container">
+   <a href="dashboard.html" class="logo">
+  <img src="5634fd87-8ef3-48b1-8a99-34bec4a15fba-removebg-preview.png" alt="RENOVA Logo" class="logo-img" style="height: 55px;">
+  <div>
+    <div class="logo-text">RENOVA</div>
+    <div class="logo-sub">Coleção & Reutilização Sustentável</div>
+  </div>
+</a>
+    <div class="ms-auto d-flex gap-2" id="navUserArea"></div>
+  </div>
+</nav>
+
+<main class="container my-5 py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-7">
+      <div class="card-glass p-4 p-md-5">
+        <div class="text-center mb-4">
+          <i class="bi bi-camera-fill" style="font-size: 48px; color: var(--green-renova);"></i>
+          <h2 class="fw-bold mt-2">Anunciar novo item</h2>
+          <p class="text-muted">Dê uma segunda vida para o que você não usa mais</p>
+        </div>
+
+        <form id="newItemForm">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Título do item *</label>
+            <input type="text" id="itemTitle" class="form-control form-control-custom" placeholder="Ex: Telhas Romanas, Sofá Seminovo..." required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Categoria *</label>
+            <select id="itemCategory" class="form-select form-control-custom" required>
+              <option value="">Selecione uma categoria</option>
+              <option>Materiais de Construção</option>
+              <option>Móveis</option>
+              <option>Eletrônicos</option>
+              <option>Entulho/Sucata</option>
+              <option>Utensílios Domésticos</option>
+              <option>Livros</option>
+              <option>Roupas e Acessórios</option>
+              <option>Ferramentas</option>
+              <option>Outros</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Descrição detalhada *</label>
+            <textarea id="itemDesc" class="form-control" rows="4" style="border-radius: 20px;" placeholder="Descreva o estado, quantidade, detalhes importantes..." required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Quantidade / Volume *</label>
+            <input type="text" id="itemQuantity" class="form-control form-control-custom" placeholder="Ex: 100m², 2 toneladas, 1 unidade..." required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Endereço do item *</label>
+            <input type="text" id="itemAddress" class="form-control form-control-custom" placeholder="Rua, número, bairro, cidade" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Duração do anúncio *</label>
+            <select id="itemDuration" class="form-select form-control-custom">
+              <option value="1">⏱️ 24 horas</option>
+              <option value="7">📅 1 semana</option>
+              <option value="15" selected>📆 15 dias</option>
+              <option value="30">🗓️ 1 mês</option>
+            </select>
+            <small class="text-muted">Após esse prazo, o melhor lance será notificado</small>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Fotos do item</label>
+            <div class="border rounded-4 p-3 text-center" style="background: #f8f9fa;">
+              <i class="bi bi-image" style="font-size: 32px; color: var(--green-renova);"></i>
+              <p class="mb-0 small text-muted">📸 Clique para adicionar fotos (simulado - protótipo)</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary-renova w-100 py-3 mt-2">
+            <i class="bi bi-check-lg me-2"></i>Publicar anúncio na RENOVA
+          </button>
+        </form>
+
+        <div class="text-center mt-4">
+          <a href="dashboard.html" class="text-decoration-none" style="color: var(--terracota);">
+            <i class="bi bi-arrow-left"></i> Voltar para os itens
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <div class="small text-muted">
+          <i class="bi bi-tree-fill text-success"></i> Cada item anunciado evita resíduos no meio ambiente
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-renova">
+  <div class="container text-center">
+    <p class="small mb-0">♻️ Anuncie gratuitamente - Ajude o planeta e quem precisa</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+<script src="novo-item.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENOVA · Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .logo-img-custom {
+      height: 55px;
+      width: auto;
+      object-fit: contain;
+    }
+    .logo-center-img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="decor-bg">
+  <div class="circle circle-1"></div>
+  <div class="circle circle-2"></div>
+</div>
+
+<nav class="navbar nav-glass sticky-top py-3">
+  <div class="container">
+    <a href="dashboard.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+      <!-- LOGO DA NAVBAR COM SUA IMAGEM -->
+      <img src="5634fd87-8ef3-48b1-8a99-34bec4a15fba-removebg-preview.png" alt="RENOVA Logo" class="logo-img-custom">
+      <div>
+        <div class="logo-text" style="font-weight: 800; font-size: 1.3rem; background: linear-gradient(135deg, #2D6A4F, #E76F51); background-clip: text; -webkit-background-clip: text; color: transparent;">RENOVA</div>
+        <div class="logo-sub" style="font-size: 0.65rem; color: #E76F51;">Coleção & Reutilização Sustentável</div>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<main class="container my-5 py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card-glass p-4 p-md-5">
+        <div class="text-center mb-4">
+          
+          <img src="5634fd87-8ef3-48b1-8a99-34bec4a15fba-removebg-preview.png" alt="RENOVA Logo" class="logo-center-img">
+          <p class="text-muted small mt-2">Coleção & Reutilização Sustentável</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="mb-3">
+            <input type="email" id="loginEmail" class="form-control form-control-custom" placeholder="E-mail" value="marcos@renova.com" required>
+          </div>
+          <div class="mb-4">
+            <input type="password" id="loginPassword" class="form-control form-control-custom" placeholder="Senha" value="123456" required>
+          </div>
+          <button type="submit" class="btn btn-primary-renova w-100 py-3">
+            <i class="bi bi-box-arrow-in-right me-2"></i>Entrar na RENOVA
+          </button>
+        </form>
+
+        <div class="text-center mt-4 pt-2">
+          <p class="text-muted small">Demo: <strong>marcos@renova.com</strong> / 123456</p>
+          <p>Não tem conta? <a href="cadastrar.html" style="color: #E76F51; font-weight: 600;">Cadastre-se gratuitamente →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-renova">
+  <div class="container text-center">
+    <p class="small mb-0">♻️ RENOVA - Transforme o que não usa em oportunidade para alguém</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('loginEmail').value;
+    var password = document.getElementById('loginPassword').value;
+    if (typeof handleLogin === 'function' && handleLogin(email, password)) {
+      window.location.href = 'dashboard.html';
+    }
+  });
+</script>
+</body>
+</html>
