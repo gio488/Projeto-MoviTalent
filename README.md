@@ -61,21 +61,22 @@ Marcos trocou o telhado de sua casa e ficou com **100m² de telhas romanas ocupa
 
 ## 📁 Estrutura do Projeto
 
+
 Projeto-MoviTalent/
-├── index.html # Tela inicial / Splash
-├── cadastrar.html # Cadastro de usuário
-├── detalhes.html # Login
-├── dashboard.html # Home com itens disponíveis
-├── detalhe-item.html # Detalhes do item + lances
-├── perfil.html # Perfil do usuário
-├── meus-itens.html # Gerenciar meus anúncios
-├── novo-item.html # Formulário para anunciar
-├── style.css # Estilos personalizados
-├── app.js # Lógica principal (mock data)
-├── detalhe-item.js # Lógica da página de detalhes
-├── meus-itens.js # Lógica da página meus itens
-├── novo-item.js # Lógica da página novo item
-└── 5634fd87-8ef3-48b1-...png # Logo da RENOVA
+├── index.html                 # Tela inicial / Splash
+├── cadastrar.html             # Cadastro de usuário
+├── detalhes.html              # Login
+├── dashboard.html             # Home com itens disponíveis
+├── detalhe-item.html          # Detalhes do item + lances
+├── perfil.html                # Perfil do usuário
+├── meus-itens.html            # Gerenciar meus anúncios
+├── novo-item.html             # Formulário para anunciar
+├── style.css                  # Estilos personalizados
+├── app.js                     # Lógica principal (mock data)
+├── detalhe-item.js            # Lógica da página de detalhes
+├── meus-itens.js              # Lógica da página meus itens
+├── novo-item.js               # Lógica da página novo item
+└── 5634fd87-8ef3-48b1-...png  # Logo da RENOVA
 ---
 
 ## 🚀 Como Executar o Projeto
